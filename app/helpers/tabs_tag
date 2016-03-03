@@ -1,0 +1,4 @@
+<%= tabs_tag do |tab| %>
+  <%= tab.home      'Homepage', root_path %>
+  
+<% end %>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Foundation | Welcome</title>
+</head>
+ <div class="orbit" role="region" aria-label="Favorite Space Pictures">
+<ul class="orbit-container" data-orbit>
+<button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+<button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+<li class="orbit-slide is-active">
+<img src="http://ldsearthstewardship.org/wp-content/uploads/2012/09/books.jpg" width="1500"
+height="750">
+</li>
+<li class="orbit-slide">
+<img src="http://cdn.www.duarte.com/wp-content/uploads/2010/03/Book_Cover_word_people.jpg" width="1500"
+height="750">
+</li>
+<li class="orbit-slide">
+<img src="https://s-media-cache-ak0.pinimg.com/236x/fd/16/54/fd1654e603e5e91d5fee86422fc6efc2.jpg" width="1500"
+height="750">
+</li>
+<li class="orbit-slide">
+<img src="https://www.washingtonpost.com/graphics/entertainment/best-books-of-2015/img/wp_readers_update.png" width="1500"
+height="750">
+</li>
+</ul>
+</div>
+<div class="row column text-center">
+
+
+<h2>Newest Releases!</h2>
+<hr>
+</div>
+<div class="row small-up-2 large-up-4">
+<% @books.each do |book| %>
+<div class="column">
+<%= link_to image_tag(book.poster_url), book_path(book), :class => 'thumbnail', :method => 'get' %>
+<h5><b><%= book.title %></b>
+by <%= book.author %>
+</h5>
+<b><p>$<%=book.price%></p></b>
+<a href="/cart/<%= book.id %>" class="button expanded">Move to cart</a>
+</div>
+<% end %>
+
+<hr>
+<div class="row column">
+<div class="callout primary">
+
+</div>
+</div>
+<hr>
+<div class="row column text-center">
+<h2>Magazines 2016</h2>
+<hr>
+</div>
+<div class="row small-up-2 medium-up-3 large-up-6">
+<div class="column">
+<img class="thumbnail" src="https://s-media-cache-ak0.pinimg.com/736x/b6/43/c6/b643c616e15262970aae0e410b460e6f.jpg" width="300" height="400">
+<h5>The business magazine 2016 </h5>
+<b><p>$60</p></b>
+<!-- <a href="#" class="button small expanded hollow">Move to cart</a> -->
+</div>
+<div class="column">
+<img class="thumbnail" src="http://www.pdfmagaz.in/wp-content/uploads/2016/01/15/diesel-tech-magazine-winter-2016/Diesel-Tech-Magazine-Winter-2016.jpg" width="300" height="400">
+<h5>Deisel tech</h5>
+<b><p>$150</p></b>
+<!-- <a href="#" class="button small expanded hollow">Move to cart</a> -->
+</div>
+<div class="column">
+<img class="thumbnail" src="http://downmagaz.com/uploads/posts/2016-01/1451802682_tech__learning_2016_01_downmagaz.jpg" width="300" height="400">
+<h5>Tech&Learning</h5>
+<b><p>$80</p></b>
+<!-- <a href="#" class="button small expanded hollow">Move to cart</a> -->
+</div>
+<div class="column">
+<img class="thumbnail" src="http://downmagaz.com/uploads/posts/2016-01/1452843596_historic-racing-technology-winter-2016_downmagaz.com.jpg">
+<h5>History Racing Tech</h5>
+<b><p>$60</p></b>
+<!-- <a href="#" class="button small expanded hollow">Move to cart</a> -->
+</div>
+<div class="column">
+<img class="thumbnail" src="http://thebook-mark.com/magazines/uploads/posts/2015-11/thumbs/1448900745_7017.jpg">
+<h5>Tech Advisor</h5>
+<b><p>$120</p></b>
+<!-- <a href="#" class="button small expanded hollow">Move to cart</a> -->
+</div>
+<div class="column">
+<img class="thumbnail" src="http://d3lp4xedbqa8a5.cloudfront.net/s3/digital-cougar-assets/BauerCorporate/2015/05/11/1616/0006091_good-health.jpeg" width="300" height="400">
+<h5>Good Health</h5>
+<b><p>$130</p></b>
+<!-- <a href="#" class="button small expanded hollow">Move to cart</a> -->
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="medium-4 columns">
+<h4>BestReads 2015</h4>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="http://www.kateatkinson.co.uk/upld/tt/timthumb.php?src=upld/jackets/AGIR_US_e4988a19d162.jpg&q=81&w=600&h=900&zc=0" width="100" height="100">
+</div>
+<div class="media-object-section">
+<h5><b>A God in Ruins</b> by Kate Atkinson</h5>
+<p2>Atkinson covers four generations of the Todd family that was at the center of her novel, Life After Life. The narrative jumps throughout the 20th century around the story of Teddy Todd, a Royal Air Force pilot in World War II who struggles with his postwar survival.</p2>
+</div>
+</div>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="http://www.nealstephenson.com/assets/gallery/3/113.jpg" width="100" height="100">
+</div>
+<div class="media-object-section">
+<h5><b>Seveneves</b> by Neal Stephenson </h5>
+<p2>When disaster dooms the planet, people across the world unite to send a coalition into outer space and ensure the survival of their species. After 5,000 years, seven races of humans stem from the survivors, and they attempt to return to a changed earth.</p2>
+</div>
+</div>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="http://ecx.images-amazon.com/images/I/41tr2GDzhtL._SX327_BO1,204,203,200_.jpg" width="100" height="100">
+</div>
+<div class="media-object-section">
+<h5><b>I Take You</b> by Eliza Kennedy</h5>
+<p2>Lily Wilder, a promiscuous lawyer in New York, prepares to marry her archaeologist fiancé, Will. The novel follows her difficulties embracing monogamy in both theory and practice, told with the inflection of Lily’s humor.</p2>
+</div>
+</div>
+</div>
+<div class="medium-4 columns">
+<h4>BestReads 2015 </h4>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="http://ecx.images-amazon.com/images/I/514Qc9qdPHL._SX325_BO1,204,203,200_.jpg" width="100" height="100">
+</div>
+<div class="media-object-section">
+<h5><b>Get in Trouble</b> by Kelly Link</h5>
+<p2>Each of these nine stories takes place in a seemingly normal setting, such as a hotel or at a birthday party, into which dark elements of the fantastic and supernatural subtly intrude.</p2>
+</div>
+</div>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="http://www.rarshare.com/wp-content/uploads/2015/03/51F4L8SwzBL._SY300_.jpg" width="100" height="100">
+</div>
+<div class="media-object-section">
+<h5><b>Trigger Warning</b> by Neil Gaiman </h5>
+<p2>A collection of tales from virtuoso storyteller Neil Gaiman, ranging from horror to science fiction to fairy tales to verse. They include “adventure story,” Gaiman’s rumination on death, and “a calendar of tales,” short takes inspired by his replies to fan tweets. </p2>
+</div>
+</div>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="http://i0.wp.com/www.casualoptimist.com/wp-content/uploads/2014/07/H-Is-For-Hawk.jpg" width="100" height="100">
+</div>
+<div class="media-object-section">
+<h5><b>H is for Hawk</b> by Helen Macdonald</h5>
+<p2>An experienced falconer, Macdonald resolves to train a vicious predator, the goshawk, as a means to cope with the death of her father. This stunning memoir explores the deep strange bond she forms with her bird.</p2>
+</div>
+</div>
+</div>
+<div class="medium-4 columns">
+<h4>BestReads 2015</h4>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="http://i.telegraph.co.uk/multimedia/archive/03255/alice7_3255945f.jpg" width="100" height="100">
+</div>
+<div class="media-object-section">
+<h5><b>The Story of Alice</b> by Robert Douglas-Fairhurst</h5>
+<p2>The Story of Alice charts the curious, controversial friendship between Oxford mathematician Charles Dodgson (more commonly known as Lewis Carroll) and Alice Liddell, the child for whom he created Alice in Wonderland. The book also explores how and why Alice in Wonderland and its sequel, Through the Looking Glass, have had such lasting cultural resonance.</p2>
+</div>
+</div>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="http://images.randomhouse.com/cover/9781594632648" width="100" height="100">
+</div>
+<div class="media-object-section">
+<h5><b>The brothers</b> by masha gessen</h5>
+<p2>Russian-American journalist Masha Gessen’s passionate, opinionated, deeply reported exploration of the long road that led the Tsarnaev brothers to commit the Boston Marathon bombing. She traces the family’s history from Chechnya to a precarious Boston-area immigrant demi-monde, asking urgent questions and avoiding simple answers. </p2>
+</div>
+</div>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="http://images.randomhouse.com/cover/9780804171441" width="100" height="180">
+</div>
+<div class="media-object-section">
+<h5><b>The folded clock</b> by heidi julavits</h5>
+<p2>Inspired by diaries from her childhood, Heidi Julavits chronicles her daily life in this diary-form memoir that is simultaneously about small details and big ideas. </p2>
+</div>
+</div>
+</div>
+</div>
+<div class="callout large secondary">
+<div class="row">
+<div class="large-4 columns">
+<b><h4>Power and importance of reading</h4></b>
+<p2>The biggest pleasure comes from what we read, not from on what we read.
+The real difference, though, lies in our attitude to reading. Gilbert K. Chesterton once said: “There is a great deal of difference between an eager man who wants to read a book and the tired man who wants a book to read.”</p2>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

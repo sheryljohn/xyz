@@ -1,0 +1,23 @@
+<body>
+<%= csrf_meta_tag %> 
+  <%= render "layouts/header" %>
+
+  <%= render "layouts/alerts" %>
+
+  <div id="main-content" class="row full-min-height">
+    <%= yield %>
+  </div>
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr> <p>© BoOkStore 2016</p>
+      <h1 style="text-align:right;">
+            <img src="http://s.gr-assets.com/assets/home/headline-e2cd420e71737ff2815d09af5b65c4e4.png" alt="http://s.gr-assets.com/assets/home/headline-e2cd420e71737ff2815d09af5b65c4e4.png" width="150" height="142"></h1>
+    </div>
+  </footer>
+
+
+  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "application" %>
+</body>
+

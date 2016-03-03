@@ -1,0 +1,25 @@
+<h2>Your Cart!</h2>
+<h5><%= link_to 'Empty Your Cart' , cart_clear_path %></h5>
+<br><br><br>
+
+<% total = 0 %>
+
+<ul>
+
+<% @cart.each do | id, quantity | %>
+    <% book = Book.find(id) %>
+    <li>
+     <b><h6><%= link_to book.title, book  %></b></h6>
+     <p><%= book.author %></p>
+     <p><%= number_to_currency(book.price, :unit => '$') %></p>
+     <p>Quantity: <%= quantity %></p>
+    </li>
+    <h2><% total += quantity * book.price %></h2>
+<% end %>
+<p><b><h4><%= number_to_currency(total, :unit => '$') %></h4></b></p>
+</ul>
+<style>
+h2, h5{
+	text-align: center;
+}
+</style>
